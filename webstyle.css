@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --primary-color:#873651;
+    --secondary-color:#391335;
+}
+
+body{
+    background-color: var(--primary-color);
+    font-family: 'Poppins',sam-serif;
+    margin: 0%;
+    color: white;
+}
+
+header{
+    align-items: center;
+    padding: 2.3rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+.home{
+    color: #fff;
+    font-weight: 600;
+    font-size: 2rem;
+    font-family: 'Poppins' sans-serif;
+    text-decoration: none;
+}
+.home:hover{
+    color: lightgray;
+}
+header h1{
+    text-align: center;
+    margin-right: 30%;
+    display: flex;
+    color: white;
+}
+
+.search{
+    background-color: transparent;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    font-family: inherit;
+}
+.search_form{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    border: 2px solid white;
+
+}
+
+.search:focus{
+    outline: 0;
+    background-color: var(--primary-color);
+}
+.search::placeholder{
+    color: white;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie{
+    width: 300px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.movie img{
+    width: 100%;
+}
+
+.movie-info{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info span{
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.movie-info span.green{
+    color: rgb(25, 236, 25);
+}
+.movie-info span.orange{
+    color: rgb(255, 211, 130);
+}
+.movie-info span.red{
+    color: red;
+}
+
+.overview{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+/* .movie overview h3{
+    position: relative;
+
+} */
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
